@@ -1,0 +1,34 @@
+services:
+
+  postgres:
+    # Imagem oficial do PostgreSQL
+    image: postgres:16
+
+    # Nome do container
+    container_name: sql_portfolio_db
+
+    # Reinicia o banco automaticamente caso o container pare
+    restart: always
+
+    environment:
+      # Nome do banco criado automaticamente
+      POSTGRES_DB: expense_management
+
+      # Usuário do banco
+      POSTGRES_USER: admin
+
+      # Senha do banco
+      POSTGRES_PASSWORD: admin123
+
+    ports:
+      # Porta local : porta do PostgreSQL
+      - "5432:5432"
+
+    volumes:
+      # Mantém os dados mesmo que o container seja desligado
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+
+  # Volume utilizado pelo PostgreSQL
+  postgres_data:
