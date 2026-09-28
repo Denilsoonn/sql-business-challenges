@@ -1,4 +1,4 @@
-# SQL Business Challenges
+# Desafios de SQL para Análise de Negócios
 
 Projeto desenvolvido para praticar e demonstrar conhecimentos em **SQL e bancos de dados relacionais**, utilizando consultas para resolver problemas baseados em regras de negócio.
 
